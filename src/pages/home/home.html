@@ -1,14 +1,31 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="wood">
+    <ion-row>
+      <ion-col col-1>
+        <ion-buttons>
+          <button ion-button icon-only (click)="mostrarMenu()" ><ion-icon name="menu"></ion-icon></button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col><ion-title>BanklessCoop</ion-title></ion-col>
+    </ion-row>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div text-wrap>
+    Cooperativa Castro
+    Aplicativo mobile BanklessCoop, desarrollado kire7z@hotmail.com 2018
+  </div>
+  <ion-item style="height:350px">
+      <ion-slides autoplay="5000" loop="true" speed="500" pager="true" >
+        <ion-slide *ngFor="let e of presentacion">
+          <ion-img width="350" height="80" [src]="e.imagen"></ion-img>
+          <br>
+          <h3>{{e.descripcion}}</h3>
+        </ion-slide>
+      </ion-slides>
+  </ion-item>
+  <button *ngIf="!esLogin" ion-button color="secondary" block [navPush]="login">login</button>
+  <button *ngIf="esLogin" ion-button color="danger" block (click)="logout()">logout</button>
+
 </ion-content>

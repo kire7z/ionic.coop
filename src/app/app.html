@@ -1,1 +1,19 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="wood">
+      <ion-title>BanklessCoop</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="cargarTab(tabs)">
+        Home
+      </button>
+      <button ion-item (click)="cargarTab(acerca)">
+        Acerca
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>

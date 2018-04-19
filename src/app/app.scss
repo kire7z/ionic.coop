@@ -14,3 +14,49 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.alertDanger{
+  .alert-sub-title {
+    color: color($colors, dark, base)!important;
+  }
+    background-color: color($colors, wood, base);
+    color: color($colors, danger, base)!important;
+}
+.alertDangerBtn{
+    background-color: color($colors, danger, base)!important;
+    color:#ffffff!important;
+}
+
+.alertWarning{
+  .alert-sub-title {
+    color: color($colors, dark, base)!important;
+  }
+    background-color: color($colors, wood, base);
+    color: color($colors, warning, base)!important;
+}
+.alertWarningBtn{
+    background-color: color($colors, warning, base)!important;
+    color:#ffffff!important;
+}
+
+.alertOk{
+  .alert-sub-title {
+    color: color($colors, dark, base)!important;
+  }
+    color: color($colors, secondary, base)!important;
+}
+.alertOkBtn{
+    background-color: color($colors, secondary, base)!important;
+    color:#ffffff!important;
+}
+
+.alert{
+  .alert-sub-title {
+    color: color($colors, dark, base)!important;
+  }
+    color: color($colors, primary, base)!important;
+}
+.alertBtn{
+    background-color: color($colors, primary, base)!important;
+    color:#ffffff!important;
+}
